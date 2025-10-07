@@ -97,7 +97,7 @@ TF_TASKS = ["csbench_assert", "boolq", "strategyqa"]
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--tokenizer", type=str, default="meta-llama/Llama-3.1-8B-Instruct")
-    parser.add_argument("--model_path", type=str, default="/localscratch/yueyu/rl_rag/Adaptive-RAG/models/llama-3.1-8b-instruct")
+    parser.add_argument("--model_path", type=str, default="")
     parser.add_argument("--model_name", type=str, default="llama-3.1-8b")
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--top_p", type=float, default=0.99)
@@ -160,7 +160,7 @@ def main():
     ])
 
     # Load model and tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(args.tokenizer, cache_dir="/localscratch/yueyu/cache/")
+    tokenizer = AutoTokenizer.from_pretrained(args.tokenizer)
     sampling_params = SamplingParams(
         temperature=args.temperature, top_p=args.top_p, repetition_penalty=1.05, max_tokens=512
     )
