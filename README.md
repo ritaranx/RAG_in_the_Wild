@@ -1,4 +1,4 @@
-# RAG in the Wild: Mixture-of-Knowledge Retrieval Augmentation Framework
+# RAG in the Wild: On the (In)effectiveness of LLMs with Mixture-of-Knowledge Retrieval Augmentation
 
 This repository contains the official codebase for our paper:
 
@@ -41,7 +41,7 @@ pip install transformers vllm tqdm
 
 ### Data Preparation
 
-All the data have been uploaded to the huggingface repo [ritaranx/RAG_in_the_Wild](https://huggingface.co/datasets/ritaranx/RAG_in_the_Wild).
+All the data have been uploaded to the HuggingFace repo [ritaranx/RAG_in_the_Wild](https://huggingface.co/datasets/ritaranx/RAG_in_the_Wild).
 
 
 Each task/domain file should be located at:
